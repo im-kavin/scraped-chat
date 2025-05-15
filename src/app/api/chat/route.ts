@@ -85,7 +85,7 @@ export async function POST(request: Request) {
 
 		// Using OpenAI.Responses.CreateParams as per corrected understanding
 		const createParams: OpenAI.Responses.ResponseCreateParams = {
-			model: 'gpt-4o', // Hardcoded to gpt-4o
+			model: 'gpt-4.1-nano', 
 			input: currentInputItems,
 			instructions:
 				"You are a friendly and helpful assistant. If relevant, use the information from the provided files to answer the user's query.", // Default system prompt
