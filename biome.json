@@ -1,0 +1,70 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"ignore": ["sst.config.ts", "sst-env.d.ts", "bun.lock"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"trailingCommas": "all",
+			"semicolons": "always"
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"all": true,
+			"correctness": {
+				"useImportExtensions": "off",
+				"noUndeclaredDependencies": "off",
+				"noNodejsModules": "off"
+			},
+			"performance": {
+				"noReExportAll": "off",
+				"noBarrelFile": "off"
+			},
+			"suspicious": {
+				"noReactSpecificProps": "off"
+			},
+			"style": {
+				"noNamespaceImport": "off",
+				"noDefaultExport": "off",
+				"useNamingConvention": {
+					"level": "error",
+					"options": {
+						"strictCase": false,
+						"enumMemberCase": "CONSTANT_CASE",
+						"conventions": [
+							{
+								"selector": {
+									"kind": "const"
+								},
+								"formats": ["camelCase", "PascalCase", "CONSTANT_CASE"]
+							},
+							{
+								"selector": {
+									"kind": "objectLiteralProperty"
+								},
+								"formats": ["camelCase", "CONSTANT_CASE"]
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

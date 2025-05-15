@@ -1,0 +1,37 @@
+{
+	"name": "scraped-chat",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack -p 3000",
+		"build": "next build",
+		"start": "next start",
+		"check": "biome check .",
+		"check:fix": "biome check . --fix --unsafe",
+		"clean": "rm -rf node_modules bun.lock .next"
+	},
+	"dependencies": {
+		"@radix-ui/react-dialog": "^1.1.13",
+		"@radix-ui/react-slot": "^1.2.2",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.510.0",
+		"next": "15.3.2",
+		"openai": "^4.98.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.15.18",
+		"@types/react": "^19.1.4",
+		"@types/react-dom": "^19.1.5",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^4.1.6",
+		"tailwind-merge": "^3.3.0",
+		"@tailwindcss/postcss": "^4.1.6",
+		"tw-animate-css": "^1.2.9",
+		"typescript": "^5.8.3"
+	},
+	"trustedDependencies": ["@biomejs/biome", "sharp", "@tailwindcss/oxide"]
+}
